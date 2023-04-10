@@ -343,25 +343,22 @@ Pour indiquer que nous utilisons cette norme nous devons :\\
 
 \subsection*{Extrait Examen BTS CPRP 2020}
 
-Prenons l'exemple du BTS 2020. Certaines côtes ont des tolérances, comme ce diamètre :  \begin{tikzpicture}  {$ \varnothing 3^{ \begin{array}{l}
+Prenons l'exemple du BTS 2020 Figure \ref{ABTS1}.\\ 
+Certaines côtes ont des tolérances, comme ce diamètre :  \begin{tikzpicture}  {$ \varnothing 3^{ \begin{array}{l}
 +0,20\\
 -0
-\end{array}}$}; \end{tikzpicture}  \\
+\end{array}}$}; \end{tikzpicture}  
 
-\vspace{1 cm}
+\vspace{0.5 cm}
 
 Ou la côte suivante : 
 \begin{tikzpicture}  {$ 8,10^{ \begin{array}{l}
 +0,10\\
 0
 \end{array}}$}; \end{tikzpicture} \\
-
-
-
 D'autres ont seulement une côte, sans tolérances visible directement : 0,70 ou $\varnothing$2,50.\\
-Pour les côtes qui n'ont pas de tolérances, comment savoir la marge d'erreur acceptée ?\\
-
-Essayez, pour les deux cotations énoncées juste avant, d'indiquer la tolérance en vous aidant du détail de la norme 2768 en annexe.
+Pour les côtes qui n'ont pas de tolérances, comment savoir \textbf{la marge d'erreur acceptée} ?\\
+Essayez, pour les deux cotations énoncées juste avant, d'indiquer la tolérance en vous aidant du détail de la norme 2768 en annexe et de la Figure \ref{Tol2}.
 
 
 \begin{table}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
@@ -433,13 +430,15 @@ En fonction de ce qu'on souhaite décrire, on utilise un ou plusieurs des diagra
 	\label{Sys1} % Unique label used for referencing the figure in-text
 \end{figure}
 
+
+
 Chacune des trois catégories répond à une question :
 \begin{itemize}
     \item modélisation fonctionnelle : « que doit faire le système ? »
     \item modélisation comportementale : « comment le système doit-il se comporter ? »
     \item modélisation structurelle : « comment le système est-il construit ? ».
 \end{itemize}
-Ces différentes modélisation permettent de situer la \textbf{frontière de l’étude} dans un contexte \textbf{pluri-technologique}. Le tout pour que le système réponde au Cahier des charges.
+Ces différentes modélisation permettent de situer la \textbf{frontière de l’étude} dans un contexte \textbf{pluri-technologique}. Le tout pour que le système réponde au Cahier des charges.\\
 
 \begin{definition}[Cahier des charges (CdC)]\index{Cahier des charges}
     C’est un document par lequel le demandeur exprime son besoin (ou celui qu'il est chargé de
@@ -471,22 +470,18 @@ Par exemple
 
 
 
-\subsection{Exemple d'un portail}
+\subsection{Exemple BTS 2020}
 
-Le système suivant est un ouvre portail (figure \ref{Port1}). Un schéma représente le système ainsi que certain de ses éléments principaux.
+Le système suivant est celui de l'arc à poulie doté du système décocheur Arc Système 303P (figure \ref{fleche1}). 
 \begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
 	\centering % Horizontally center the figure on the page
-	\includegraphics[width=0.7\textwidth]{Images/port1.JPG} % Include the figure image
-	\caption{Ouvre-portail}
-	\label{Port1} % Unique label used for referencing the figure in-text
+	\includegraphics[width=0.7\textwidth]{Images/fleche1.png} % Include the figure image
+	\caption{Système 303P}
+	\label{fleche1} % Unique label used for referencing the figure in-text
 \end{figure}
-Dans les sciences de l'ingénieur, on s'intéresse aux écarts entre ce qu'on veut (en théorie), et se qui se passe vraiment (en pratique). On représente un schéma "fonctionnel" du système (figure \ref{Port2}). Il permet de collecter et d'organiser toutes les exigences du système (caractéristiques ou performances théoriques attendues), sous forme textuelle. 
-\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
-	\centering % Horizontally center the figure on the page
-	\includegraphics[width=1\textwidth]{Images/port2.JPG} % Include the figure image
-	\caption{Schéma SysML, modélisation fonctionnelle, schéma d'exigence.}
-	\label{Port2} % Unique label used for referencing the figure in-text
-\end{figure}
+Dans les sciences de l'ingénieur, on s'intéresse aux écarts entre ce qu'on veut (en théorie), et se qui se passe vraiment (en pratique). On représente un schéma "fonctionnel" du système. Il permet de collecter et d'organiser toutes les exigences du système (caractéristiques ou performances théoriques attendues), sous forme textuelle. 
+
+\includepdf[angle=90]{fleche2.pdf}
 
 
 
@@ -542,7 +537,7 @@ $\{ \mathcal{V} (S/R) \}
 
 %------------------------------------------------
 
-\chapter{Chapitre}
+\chapter{Spécification géométrique des produits}
 \section{Titre}
 \subsection{Sous titre}
 \begin{definition}
