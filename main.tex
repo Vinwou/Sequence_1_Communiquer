@@ -1,0 +1,589 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The Legrand Orange Book
+% LaTeX Template
+% Version 3.1 (February 18, 2022)
+%
+% This template originates from:
+% https://www.LaTeXTemplates.com
+%
+% Authors:
+% Vel (vel@latextemplates.com)
+% Mathias Legrand (legrand.mathias@gmail.com)
+%
+% License:
+% CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
+%
+% Compiling this template:
+% This template uses biber for its bibliography and makeindex for its index.
+% When you first open the template, compile it from the command line with the 
+% commands below to make sure your LaTeX distribution is configured correctly:
+%
+% 1) pdflatex main
+% 2) makeindex main.idx -s indexstyle.ist
+% 3) biber main
+% 4) pdflatex main x 2
+%
+% After this, when you wish to update the bibliography/index use the appropriate
+% command above and make sure to compile with pdflatex several times 
+% afterwards to propagate your changes to the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+	11pt, % Default font size, select one of 10pt, 11pt or 12pt
+	fleqn, % Left align equations
+	a4paper, % Paper size, use either 'a4paper' for A4 size or 'letterpaper' for US letter size
+	%oneside, % Uncomment for oneside mode, this doesn't start new chapters and parts on odd pages (adding an empty page if required), this mode is more suitable if the book is to be read on a screen instead of printed
+]{LegrandOrangeBook}
+
+% Book information for PDF metadata, remove/comment this block if not required 
+
+
+\addbibresource{sample.bib} % Bibliography file
+
+\definecolor{ocre}{RGB}{243, 102, 25} % Define the color used for highlighting throughout the book
+
+\chapterimage{orange2.jpg} % Chapter heading image
+\chapterspaceabove{6.5cm} % Default whitespace from the top of the page to the chapter title on chapter pages
+\chapterspacebelow{6.75cm} % Default amount of vertical whitespace from the top margin to the start of the text on chapter pages
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\titlepage % Output the title page
+	{\includegraphics[width=\paperwidth]{Images/background.pdf}} % Code to output the background image, which should be the same dimensions as the paper to fill the page entirely; leave empty for no background image
+	{ % Title(s) and author(s)
+		\centering\sffamily % Font styling
+		{\Huge\bfseries TS CPRP 1 \\ Sciences de l'ingénieur\par} % Book title
+		\vspace{16pt} % Vertical whitespace
+		{\LARGE Séquence 1 : Communiquer dans l'industrie\par} % Subtitle
+		\vspace{24pt} % Vertical whitespace
+		{\huge\bfseries \par} % Author name
+	}
+
+
+
+
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	SECTIONING EXAMPLES CHAPTER
+%----------------------------------------------------------------------------------------
+
+
+\part{Communiquer dans l'industrie}
+
+%----------------------------------------------------------------------------------------
+%	MATHEMATICS EXAMPLES CHAPTER
+%----------------------------------------------------------------------------------------
+
+\chapter{Représentation normée des systèmes}
+
+\section{Introduction}
+
+
+S’échanger des \textbf{informations} est essentiel pour construire le monde d’aujourd’hui. Les exigences que nous avons, vis-à-vis des \textbf{risques} (la musique d'un airpod de doit pas dépasser 100 dB), du \textbf{confort} (la température de la salle de classe ne doit pas être inférieure à 16$^{\circ}$), de l'\textbf{accessibilités} (l'espacement entre les allées doivent permettre le passage d'une chaise roulante) ou des \textbf{performances} (le véhicule doit avoir une puissance max de 100 chevaux) des systèmes que nous concevons doivent être comprise de toute.s. Cet objectif impose d’être rigoureux pour éviter les mésententes. Le temps et le coût étant pris en compte, nous voulons éviter les hors-sujets une fois le travail déjà terminé. Nous essayerons de traduire nos systèmes dans des langages ou des \textbf{schémas} compréhensible de l’industrie. Comme la grammaire en français nous impose des règles, la représentation des systèmes impose des \textbf{normes}, admises par la plupart du parc industriel mondial.\\
+
+
+Il existe trois types de normes :
+\begin{enumerate}
+    \item obligatoire / réglementaire ;
+    \item volontaire / certifiable ;
+    \item non certifiable.
+\end{enumerate}
+
+
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=0.7\textwidth]{Images/Logo1.JPG} % Include the figure image
+	\caption{Logo de différents organismes de normalisation.}
+	\label{logo} % Unique label used for referencing the figure in-text
+\end{figure}
+
+
+
+\section{Système de normalisation}
+
+\begin{corollary}[S2.4] 
+Représentations graphiques dérivées des maquettes numériques \\
+\textbf{C2.3} Synthétiser une information \\
+\textbf{C5.3} \& \textbf{C6.1} Formuler, décoder et synthétiser un cahier des charges fonctionnel ou un dossier de conception \\
+Langage de description SysML : \textbf{S1.1.1}
+
+
+\end{corollary}
+
+\begin{definition}{Normes}\index{Norme}
+
+    La normalisation a pour objet de fournir des documents de référence portant sur des règles, des caractéristiques, des recommandations ou des exemples de bonnes pratiques, relatives à des produits, à des services, à des méthodes, à des processus ou à des organisations.\\ \textit{https://www.entreprises.gouv.fr/}
+\end{definition}
+
+
+En France, inventer et modifier les normes, c'est la mission de l’Association française de normalisation (AFNOR) c'est "notre" organisme national de normalisation (ONN).  Elle utilise ses normes comme support de la réglementation (obligatoire ou non). Quand une norme \textbf{rentre en application} elle peut être destinée à notre pays, l'Europe ou pour l'international.
+
+\begin{theorem}
+    Le nom des différentes normes ou organisme de norme (obligatoire ou non) sont :
+    \begin{itemize}
+    \item AFNOR - Association française de normalisation (elle édite les normes "NF");
+        \item NF - Norme Française ;
+        \item ISO - International organization for standartization (c'est une fédération mondiale d'autre d'organismes nationaux de normalisation. On les appelles "membres de l'ISO");
+        \item EN - Normes européennes ;
+        \item DIN - Institut allemand de normalisation;
+        \item ANSI -  Institut national de normalisation américain.
+    \end{itemize}
+\end{theorem}
+
+\begin{remark}
+Notez qu'une entreprise se situant en France peut se certifier avec une norme Américaine. Si elle travail avec des français cela n'a pas grand intérêt, mais si elle traite exclusivement en Amérique c'est possible.
+\end{remark}
+
+
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=0.7\textwidth]{AFNOR.PNG} % Include the figure image
+	\caption{AFNOR Nomarlisation}
+	\label{AFNOR} % Unique label used for referencing the figure in-text
+\end{figure}
+
+
+
+\section{Norme ISO 9001}\index{ISO 9001}
+
+
+C’est une des normes les plus connues de l’industrie. Elle porte un regard général sur le management de la qualité. Elle apporte des garanties en termes de qualité organisationnelle au sein de tout type de structure. La certification ISO 9001 consiste à apporter la preuve qu'un système d'amélioration continue\footnote{Le Kaizen (en japonais), ou amélioration continue est né au Japon, peu après la fin de la Seconde Guerre mondiale. Il a gagné en popularité dans l’industrie et est devenu l’un des fondements de l’essor de Toyota, du petit fabricant automobile à l’un des plus grands constructeurs automobiles de la planète.} a été mis en place au sein de l'entreprise.\\
+
+La norme ISO 9001 fait partie des normes qui tendent à améliorer la qualité, la sécurité et l'environnement de la planète (ou en tout cas, à ne pas empirer l'emprunte carbone humaine). Elle fait partie des normes que l'on doit obtenir si l'on veut avoir la certification \textbf{Qualité-Sécurité-Environnement}. La norme ISO 9001 (relative à la qualité) complète les normes ISO 45001 (pour la sécurité) et ISO 14001 (pour l’environnement) et permet aux entreprises d’avoir une politique globale de management des risques. La certification \textbf{QSE} (Figure \ref{logo_QSE}) est un acte volontaire et s’inscrit dans une démarche de progrès global à tous les niveaux de l’entreprise.
+
+
+
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=0.3\textwidth]{Images/Logo_QSE.png} % Include the figure image
+	\caption{Logo de la certification QSE}
+	\label{logo_QSE} % Unique label used for referencing the figure in-text
+\end{figure}
+
+
+
+
+\section{Norme NF Z68-020 ou NF ISO 841}\index{NF Z68-020}
+Ce sont les normes qui précisent comment nous devons nommer les différents axes des machines outils. Bien que plus ancienne, vous verrez la plupart du temps la norme Z68-020. Cependant en Europe, cette norme a été remplacer. La norme actuellement en vigueur est la NF ISO 841 depuis septembre 2004.
+\begin{definition}
+La norme \textbf{NF Z68-020} [année 1968] définit la nomenclature des \textbf{axes et des mouvements} pour la commande numérique des machines.\footnote{https://www.boutique.afnor.org/}
+\end{definition}
+
+
+\begin{definition}
+   La norme \textbf{NF ISO 841} [année 2004] définit les systèmes d'automatisation industrielle (Commande numérique des machines), les\textbf{ systèmes de coordonnées} des MOCN et la nomenclature de leurs \textbf{mouvements}\footnote{https://www.boutique.afnor.org/}.
+\end{definition}
+
+
+
+
+Les éléments de cette normes sont au coeur de la compréhension des dessins des pièces que l'on souhaite réaliser. Le but n'est pas de les apprendre d'un coup par coeur. Au cours des deux années de BTS ces définitions seront connues par l'habitude des les côtoyer.\\
+
+
+
+\begin{definition}[Axes]\index{Axes}
+    On dira qu'un machine possède " un axe " si le mouvement est continuellement commandé numériquement en \textbf{vitesse} et en \textbf{position}. Si l'axe est seulement commandé en vitesse ou l'inverse, on l'appellera "demi-axe".
+\end{definition}
+
+
+\begin{figure}[h] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=1\textwidth]{Images/C1.png} % Include the figure image
+	\caption{Schéma de commande des axes MOCN.}
+	\label{logo_C1} % Unique label used for referencing the figure in-text
+\end{figure}
+
+
+\begin{definition}[L'axe $\overrightarrow{Z}$]\index{Axe Z}
+    Il est situé parallèlement à l’axe de la broche principale quelle que soit la machine ou perpendiculaire à la table pour les machines qui ne possèdent pas de broche.
+\end{definition}
+
+\begin{definition}[L'axe $\overrightarrow{X}$]\index{Axe X}
+    Il est associé au mouvement qui défini le plus grand déplacement après avoir situé l’axe Z. 
+\end{definition}
+
+\begin{definition}[L'axe $\overrightarrow{Y}$]\index{Axe Y}
+    Il forme avec les axes X et Z un trièdre de sens direct. Le sens positif (+) d’un mouvement de chariot provoque l’éloignement de l’outil par rapport à la pièce considérée comme fixe. 
+\end{definition}
+
+
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=0.6\textwidth]{Images/axe1.png} % Include the figure image
+	\caption{Le système de cordonnées (X, Y, Z) est un système cartésien de sens direct lié à une pièce placée sur la machine. Exemple : Sur une MOCN, on peut mettre manuellement en rotation la broche dans le sens direct en appuyant sur le bouton \textbf{C+} du pupitre de commande.}
+	\label{Axes_1} % Unique label used for referencing the figure in-text
+\end{figure}
+
+
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=1.1\textwidth]{Images/axe2.png} % Include the figure image
+	\caption{Pour les machines conventionnelles ou MOCN simple, les axes sont orientés comme ci-dessus. Le déplacement positif (+) doit éloigner l'outil de la pièce.}
+	\label{Axes_2} % Unique label used for referencing the figure in-text
+\end{figure}
+
+
+
+
+
+\section*{Exercice}\index{Exercices. Trouver les axes d'une MOCN}
+But : Indiquer ou sont les axes, leur nom et orientation et remplir le tableau.
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+   \fbox{
+	\includegraphics[width=0.9\textwidth]{Images/608.jpg} % Include the figure image
+        }
+	%\caption{Indiquez}
+	\label{Exo_1} % Unique label used for referencing the figure in-text
+\end{figure}
+
+
+\begin{table}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the table on the page
+	\begin{tabular}{L{0.15\textwidth} R{0.15\textwidth} R{0.15\textwidth}} % Specify column alignment with L{width}, C{width} and R{width} for fixed-width columns, or the default latex l, c and r for flexible-width columns
+		\toprule
+		\textbf{Type de MOCN} & \textbf{Nbr d'axe} & \textbf{Noms axes}\\
+		\midrule
+		  &  &  \\
+		  &  &  \\
+		  &  &  \\
+		\bottomrule
+	\end{tabular}
+	%\caption{Table caption.}
+	\label{Z12} % Unique label used for referencing the table in-text
+\end{table}
+
+
+
+
+
+
+But : Indiquer ou sont les axes, leur nom et orientation et remplir le tableau.
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+   \fbox{
+	\includegraphics[width=0.9\textwidth]{Images/4959.jpg} % Include the figure image
+        }
+	%\caption{Indiquez}
+	\label{Exo_2} % Unique label used for referencing the figure in-text
+\end{figure}
+
+
+\begin{table}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the table on the page
+	\begin{tabular}{L{0.15\textwidth} R{0.15\textwidth} R{0.15\textwidth}} % Specify column alignment with L{width}, C{width} and R{width} for fixed-width columns, or the default latex l, c and r for flexible-width columns
+		\toprule
+		\textbf{Type de MOCN} & \textbf{Nbr d'axe} & \textbf{Noms axes}\\
+		\midrule
+		  &  &  \\
+		  &  &  \\
+		  &  &  \\
+		\bottomrule
+	\end{tabular}
+	%\caption{Table caption.}
+	\label{tab:example} % Unique label used for referencing the table in-text
+\end{table}
+
+
+
+
+\section{Norme ISO 2768}
+\begin{definition}
+    La norme vise à simplifier les dessins techniques. Elle indique les tolérances générales (pour les dimensions linéaires et angulaires), et les tolérances géométriques qui n'ont pas d'indication de tolérances sur le schéma. Selon la cotation du schéma, il y aura quatre classes de tolérance possible.\footnote{https://www.iso.org/} \\
+\end{definition}
+
+
+En	construction	mécanique,	la	tolérances	générales 2768	est	utilisée pour	:\\
+\begin{itemize}
+    \item éviter d'écrire un nombre trop important	d'indications sur le dessin ;
+    \item avoir	une	pièce entièrement tolérancée.\\
+\end{itemize}
+
+
+
+
+Pour indiquer que nous utilisons cette norme nous devons :\\
+\begin{enumerate}
+    \item  Prendre une zone suffisamment près du	cartouche;
+    \item Inscrire " \textbf{Tolérances générales} " 
+    \item Inscrire \textbf{ISO	2768}	(numéro de la norme utilisée);
+    \item la classe de précision :
+          \begin{itemize} 
+            \item f pour "fine" (fin);
+            \item m pour "medium" (moyen);
+            \item c pour "coarse" (grossière - large);
+            \item v pour "very coarse" (très grossière - très large).
+           \end{itemize}
+        \item la classe	de	précision pour les	tolérances géométriques :
+         \begin{itemize}           
+                \item H pour fin;
+                \item K pour moyen;
+                \item M pour large.
+            \end{itemize}
+\end{enumerate}
+
+
+\subsection*{Extrait Examen BTS CPRP 2020}
+
+Prenons l'exemple du BTS 2020. Certaines côtes ont des tolérances, comme ce diamètre :  \begin{tikzpicture}  {$ \varnothing 3^{ \begin{array}{l}
++0,20\\
+-0
+\end{array}}$}; \end{tikzpicture}  \\
+
+\vspace{1 cm}
+
+Ou la côte suivante : 
+\begin{tikzpicture}  {$ 8,10^{ \begin{array}{l}
++0,10\\
+0
+\end{array}}$}; \end{tikzpicture} \\
+
+
+
+D'autres ont seulement une côte, sans tolérances visible directement : 0,70 ou $\varnothing$2,50.\\
+Pour les côtes qui n'ont pas de tolérances, comment savoir la marge d'erreur acceptée ?\\
+
+Essayez, pour les deux cotations énoncées juste avant, d'indiquer la tolérance en vous aidant du détail de la norme 2768 en annexe.
+
+
+\begin{table}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the table on the page
+	\begin{tabular}{L{0.15\textwidth} R{0.15\textwidth} R{0.15\textwidth}} % Specify column alignment with L{width}, C{width} and R{width} for fixed-width columns, or the default latex l, c and r for flexible-width columns
+		\toprule
+		\textbf{0,70} & \textbf{} & \textbf{$\varnothing$2,50}\\
+		\midrule
+		  &  &  \\
+		  & Tolérance $\pm$ &  \\
+		  &  &  \\
+		\bottomrule
+	\end{tabular}
+	%\caption{Table caption.}
+	\label{Tol} % Unique label used for referencing the table in-text
+\end{table}
+
+
+
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+   \fbox{
+	\includegraphics[width=0.9\textwidth]{Images/ABTS1.jpg} % Include the figure image
+        }
+	\caption{Modèle 303P de la société Arc Système. Il permet de tracter et de libérer la corde de manière reproductible en ayant pas (ou peu) d’influence sur sa trajectoire (ainsi que celle de la flèche). Il augmente considérablement la précision et la répétabilité du tir par rapport à un lâcher de corde manuel. Épreuve E4 : Conception préliminaire. Session 2020}
+	\label{ABTS1} % Unique label used for referencing the figure in-text
+\end{figure}
+
+Pour résumer, la méthode peut être :\\
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+   \fbox{
+	\includegraphics[width=1\textwidth]{Images/tol2.png} % Include the figure image
+        }
+	\caption{Méthode. Recherche des cotations générales.}\index{Méthode : Cotations générales}
+	\label{Tol2} % Unique label used for referencing the figure in-text
+\end{figure}
+
+
+
+
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	PRESENTING INFORMATION/RESULTS EXAMPLES CHAPTER
+%----------------------------------------------------------------------------------------
+
+\chapterimage{Images/chapt2.jpg} % Chapter heading image
+\chapterspaceabove{6.25cm} % Whitespace from the top of the page to the chapter title on chapter pages
+\chapterspacebelow{7.5cm} % Amount of vertical whitespace from the top margin to the start of the text on chapter pages
+
+\chapter{Représentation schématique}
+
+%------------------------------------------------
+
+\section{Langage SysML}
+
+Souvent au début des sujets du BTS, le "\textbf{Systems Modeling Language}" est un incontournable de l'examen du brevet CPRP. Il décrit le système que vous allez étudier pendant 6 heures !\\
+En fonction de ce qu'on souhaite décrire, on utilise un ou plusieurs des diagrammes répartis en 3 catégories (figure \ref{Sys1}).
+
+
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=1\textwidth]{Images/Sys1.JPG} % Include the figure image
+	\caption{Model SysML}
+	\label{Sys1} % Unique label used for referencing the figure in-text
+\end{figure}
+
+Chacune des trois catégories répond à une question :
+\begin{itemize}
+    \item modélisation fonctionnelle : « que doit faire le système ? »
+    \item modélisation comportementale : « comment le système doit-il se comporter ? »
+    \item modélisation structurelle : « comment le système est-il construit ? ».
+\end{itemize}
+Ces différentes modélisation permettent de situer la \textbf{frontière de l’étude} dans un contexte \textbf{pluri-technologique}. Le tout pour que le système réponde au Cahier des charges.
+
+\begin{definition}[Cahier des charges (CdC)]\index{Cahier des charges}
+    C’est un document par lequel le demandeur exprime son besoin (ou celui qu'il est chargé de
+traduire) en terme de fonctions de services ou d’exigences. Pour chacune d’elles sont définis
+des critères d’appréciation et leurs niveaux. Chacun de ces niveaux doit être assorti d’une
+flexibilité (norme AFNOR X 50-150).
+\end{definition}
+
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=1\textwidth]{Images/sys2.JPG} % Include the figure image
+	\caption{Chaque exigence doit avoir un ou plusieurs critères, niveau et flexibilités.}
+	\label{sys2} % Unique label used for referencing the figure in-text
+\end{figure}
+Par exemple
+\begin{itemize}
+    \item Exigence : un aspirateur en fonctionnement ne doit pas déranger les autres occupants d'une habitation ;
+    \item Critère : Bruit / Son ;
+    \item Niveaux : Ne doit pas dépasser 80 dB ;
+    \item Flexibilité : On autorise un dépassement de $5\%$.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+\subsection{Exemple d'un portail}
+
+Le système suivant est un ouvre portail (figure \ref{Port1}). Un schéma représente le système ainsi que certain de ses éléments principaux.
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=0.7\textwidth]{Images/port1.JPG} % Include the figure image
+	\caption{Ouvre-portail}
+	\label{Port1} % Unique label used for referencing the figure in-text
+\end{figure}
+Dans les sciences de l'ingénieur, on s'intéresse aux écarts entre ce qu'on veut (en théorie), et se qui se passe vraiment (en pratique). On représente un schéma "fonctionnel" du système (figure \ref{Port2}). Il permet de collecter et d'organiser toutes les exigences du système (caractéristiques ou performances théoriques attendues), sous forme textuelle. 
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=1\textwidth]{Images/port2.JPG} % Include the figure image
+	\caption{Schéma SysML, modélisation fonctionnelle, schéma d'exigence.}
+	\label{Port2} % Unique label used for referencing the figure in-text
+\end{figure}
+
+
+
+
+
+\subsection{Schéma bête à corne}
+\subsection{Diagramme FAST}
+\subsection{Chaîne fonctionnelle}
+
+\begin{theorem} % Specify a name/title in square brackets, or leave them out for no title
+	A set $\mathcal{D}(G)$ in dense in $L^2(G)$, $|\cdot|_0$. 
+\end{theorem}
+
+
+$\{ \mathcal{V} (S/R) \}
+= \left\{ \begin{array}{c}
+     \overrightarrow{\Omega} (S/R) \\
+     \overrightarrow{V} (B \in S/R)
+\end{array} \right\} _{B/R}
+= \left\{ \begin{array}{c}
+     \overrightarrow{\Omega} (S/R) \\
+     \overrightarrow{V} (A \in S/R) +\overrightarrow{BA} \wedge \overrightarrow{\Omega}(S/R)
+\end{array} \right\} _{B/R}$
+
+%----------------------------------------------------------------------------------------
+%	PRESENTING INFORMATION/RESULTS EXAMPLES CHAPTER
+%----------------------------------------------------------------------------------------
+
+\chapterimage{Images/A6.jpg} % Chapter heading image
+\chapterspaceabove{6.25cm} % Whitespace from the top of the page to the chapter title on chapter pages
+\chapterspacebelow{7.5cm} % Amount of vertical whitespace from the top margin to the start of the text on chapter pages
+
+%------------------------------------------------
+
+\chapter{Dessine-moi une pièce}
+
+\section{Dessin de définition}\index{Table}
+[Cours 1.2]
+
+
+3. Dessin de définition, vues, coupes, trous etc
+4. Cote intrinsèque, intro specif GPS [comment prouver que deux plans sont parallèles à un intervalle de tolérences près? "Dire ce que l'on veut - deux plans // et aussi dire comment on mesure s'ils le sont, ou si la pièce est mauvaise] , état de surface
+
+
+
+%----------------------------------------------------------------------------------------
+%	PRESENTING INFORMATION/RESULTS EXAMPLES CHAPTER
+%----------------------------------------------------------------------------------------
+
+\chapterimage{Images/AA12.jpg} % Chapter heading image
+\chapterspaceabove{6.25cm} % Whitespace from the top of the page to the chapter title on chapter pages
+\chapterspacebelow{7.5cm} % Amount of vertical whitespace from the top margin to the start of the text on chapter pages
+
+%------------------------------------------------
+
+\chapter{Chapitre}
+\section{Titre}
+\subsection{Sous titre}
+\begin{definition}
+lorem
+\end{definition}
+
+
+
+%----------------------------------------------------------------------------------------
+%	PRESENTING INFORMATION/RESULTS EXAMPLES CHAPTER
+%----------------------------------------------------------------------------------------
+
+\chapterimage{Images/A6.jpg} % Chapter heading image
+\chapterspaceabove{6.25cm} % Whitespace from the top of the page to the chapter title on chapter pages
+\chapterspacebelow{7.5cm} % Amount of vertical whitespace from the top margin to the start of the text on chapter pages
+
+%------------------------------------------------
+
+
+	
+
+
+
+
+\newpage
+\section{ANNEXE}
+ \begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=0.3\textwidth]{Images/ISO.PNG} % Include the figure image
+
+	\label{fig:placeholder} % Unique label used for referencing the figure in-text
+\end{figure}
+
+
+\includepdf{Tolerance-generale-ISO-2768.pdf}\index{ISO 2768-1}
+
+\phantomsection
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Index}} % Add an Index heading to the table of contents
+\printindex % Output the index
+
+
+\end{document}
+
+
