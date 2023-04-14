@@ -436,15 +436,17 @@ Chacune des trois catégories répond à une question :
 \begin{itemize}
     \item modélisation fonctionnelle : « que doit faire le système ? »
     \item modélisation comportementale : « comment le système doit-il se comporter ? »
-    \item modélisation structurelle : « comment le système est-il construit ? ».
+    \item modélisation structurelle : « comment le système est-il construit ? ».\\
 \end{itemize}
+
+
 Ces différentes modélisation permettent de situer la \textbf{frontière de l’étude} dans un contexte \textbf{pluri-technologique}. Le tout pour que le système réponde au Cahier des charges.\\
 
 \begin{definition}[Cahier des charges (CdC)]\index{Cahier des charges}
     C’est un document par lequel le demandeur exprime son besoin (ou celui qu'il est chargé de
 traduire) en terme de fonctions de services ou d’exigences. Pour chacune d’elles sont définis
 des critères d’appréciation et leurs niveaux. Chacun de ces niveaux doit être assorti d’une
-flexibilité (norme AFNOR X 50-150).
+flexibilité (norme AFNOR X 50-150).\\
 \end{definition}
 
 \begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
@@ -467,7 +469,7 @@ Par exemple
     \item Exigence : un aspirateur en fonctionnement ne doit pas déranger les autres occupants d'une habitation ;
     \item Critère : Bruit / Son ;
     \item Niveaux : Ne doit pas dépasser 80 dB ;
-    \item Flexibilité : On autorise un dépassement de $5\%$.
+    \item Flexibilité : On autorise un dépassement de $5\%$.\\
 \end{itemize}
 
 
@@ -514,7 +516,7 @@ Réglage de la course de déclenchement : Id= "1.2"\\
 
 
 
-\subsection{Schéma bête à corne}
+\section{Schéma bête à corne}
 Les autres schémas très rependus dans les sujets sont les diagrammes de type "Bête à corne". Ils servirons aux candidat.e.s dans l'analyse/formulation du besoin. Il doit répondre essentiellement à trois questions :
 \begin{enumerate}
     \item A qui rend-il service ?
@@ -594,7 +596,7 @@ contenant des substances solides, des huiles minérales, etc.
 
 \begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
 	\centering % Horizontally center the figure on the page
-	\includegraphics[width=1\textwidth]{Images/rob11.JPG} % Include the figure image
+	\includegraphics[width=1.1\textwidth]{Images/rob11.JPG} % Include the figure image
 	\caption{La commande du fluide peut être manuelle, hydraulique, électrique ou pneumatique. Le fluide peut passer dans les deux sens.}
 	\label{rob11} % Unique label used for referencing the figure in-text
 \end{figure}
@@ -606,17 +608,12 @@ contenant des substances solides, des huiles minérales, etc.
 
 \textbf{Question 1.1 }: Pour chaque fonction "F.P et F.S.i", on demande de définir quelle est la (ou les)
 \textbf{pièce(s) du robinet remplissant cette fonction} et d'associer la (ou les) \textbf{forme(s) permettant de l'assurer}. Répondre pour cela sur le tableau du document réponse DR1. Deux exemples sont proposés pour les fonctions F.S.1 et F.S.2 de façon à permettre de comprendre le principe. \\
-
-
-
-\textbf{Question 2.1 }: Indiquer pour le corps, quelles sont la (ou les) cote(s) et/ou dimension(s)
-correspondante(s) à la fonction principale F.P du corps (guidage en rotation).\\
-
-
-\textbf{Question 2.2 :} Quel constat faites-vous sur les dimensions nominales des diamètres ? \\
-
-
-\textbf{Question 2.3} : Qu'est-ce qui justifie selon vous ce choix du constructeur du point de vue fabrication ?
+% FP - Pièce 4 . Forme : 1/2 anneau
+% FP - Pièce 13. Forme : Tôle (pliée à partir d'un parallélépipède)
+% FP - Pièces 3 et 5. Forme : Tubes fendus 
+% FS2 - Pièce 20. Forme : Siège plastomère (tore - anneau)
+% FS2 - Pièces 6, 8, 9. Forme : Garniture Joints toriques
+% FS3 - Pièce 19. Forme : Tôle sécurité " tôle cylindrique emboutie)
 
 \end{tcolorbox}
 
@@ -625,7 +622,7 @@ correspondante(s) à la fonction principale F.P du corps (guidage en rotation).\
 \begin{tcolorbox}[colback=gray!5!white,colframe=gray!75!gray,title=Document réponse]
 \begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
 	\centering % Horizontally center the figure on the page
-	\includegraphics[width=0.8\textwidth]{Images/rob1.JPG} % Include the figure image
+	\includegraphics[width=0.9\textwidth]{Images/rob1.JPG} % Include the figure image
 	\caption{Question 1.1}
 	\label{rob1} % Unique label used for referencing the figure in-text
 \end{figure}
@@ -635,23 +632,160 @@ correspondante(s) à la fonction principale F.P du corps (guidage en rotation).\
 \end{tcolorbox}
 
 
-\subsection{Diagramme FAST}
-\subsection{Chaîne fonctionnelle}
+\section{Diagramme FAST}\index{FAST (diagramme)}
 
-\begin{theorem} % Specify a name/title in square brackets, or leave them out for no title
-	A set $\mathcal{D}(G)$ in dense in $L^2(G)$, $|\cdot|_0$. 
-\end{theorem}
+Après le diagramme bête à corne, le diagramme FAST servira davantage à entrée dans le détail du système. Le principe de la méthode de "Functional Analysis System Technique" (FAST), est de décomposer les fonctions techniques internes du produit jusqu’à établir leur relation, leur intervention, dans la réalisation des fonctions de service.\\
+
+Elle consiste à se poser 3 questions pour chaque fonction interne du produit :
+\begin{itemize}
+    \item \textbf{Comment} cela est-il fait ? (accès à une fonction technique d’ordre inférieur, décomposition)
+    \item \textbf{Pourquoi} cela est-il fait ? (accès à une fonction technique d’ordre supérieur, reconstruction)
+    \item \textbf{Quand} cela est-il utilisé ? (recherche des simultanéités)
+    
+\end{itemize}
 
 
-$\{ \mathcal{V} (S/R) \}
-= \left\{ \begin{array}{c}
-     \overrightarrow{\Omega} (S/R) \\
-     \overrightarrow{V} (B \in S/R)
-\end{array} \right\} _{B/R}
-= \left\{ \begin{array}{c}
-     \overrightarrow{\Omega} (S/R) \\
-     \overrightarrow{V} (A \in S/R) +\overrightarrow{BA} \wedge \overrightarrow{\Omega}(S/R)
-\end{array} \right\} _{B/R}$
+
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=0.8\textwidth]{Images/fast1.jpg} % Include the figure image
+	\caption{Exemple type du diagramme}
+	\label{fast1} % Unique label used for referencing the figure in-text
+\end{figure}
+
+Les fonctions du diagramme FAST doivent être décrites par un verbe à l'infinitif. Les réponses à chacune de ces questions ne sont ni exclusives, ni uniques. \\
+Afin de permettre une compréhension aisée de tous, ce type de représentation est normé. Au niveau de la France, elle est régulée par la norme NF EN 1325-1 qui décrit les grandes lignes de cette méthode.
+
+
+\subsection*{Exemple}
+Il est possible de représenter l'une des fonctions de service d'un pilote automatique de bateau. Le but sera, par exemple : «\textbf{ Maintenir le cap} ». Le diagramme FAST pourra être construit de la manière suivante :
+
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=0.8\textwidth]{Images/fast2.jpg} % Include the figure image
+	\caption{Fonction "Maintenir le cap" pour un bateau}
+	\label{fast2} % Unique label used for referencing the figure in-text
+\end{figure}
+
+
+\section{Diagramme SADT}\index{SADT (diagramme)}
+SADT (en anglais structured analysis and design technique), connue aussi sous le label IDEF0 (en anglais Integration Definition for Function Modeling). Elle se répandit vers la fin des années 1980 comme l'un des standards de description graphique d'un système complexe par analyse fonctionnelle descendante, c'est-à-dire que l'analyse chemine du général (dit « niveau A-0 ») vers le particulier et le détaillé (dits « niveaux $A_{ijk}$ »). SADT est une démarche systémique de modélisation d'un système complexe ou d'un processus opératoire.
+
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=0.7\textwidth]{Images/Sadt.png} % Include the figure image
+	\caption{Représentation théorique d'une fonction.}
+	\label{sadt} % Unique label used for referencing the figure in-text
+\end{figure}
+Une représentation de la fonction USINER pourrait être la suivante :
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=1\textwidth]{Images/sadt1.png} % Include the figure image
+	\caption{Boite principale (A0) de la fonction : Usiner une pièce.}
+	\label{sadt1} % Unique label used for referencing the figure in-text
+\end{figure}
+
+\subsection*{Exemple : Sécateur automatique}
+
+\begin{figure}[H]
+\fbox{
+    \begin{minipage}[c]{.46\linewidth}
+        \centering
+        \includegraphics[width=0.6\textwidth]{Images/seca3.JPG}
+        \caption{Système Sécateur}
+    \end{minipage}
+}
+    \hfill%
+    \begin{minipage}[c]{.46\linewidth}
+        \centering
+        \includegraphics[width=1.2\textwidth]{Images/seca1.png}
+        \caption{Boite principale de la fonction A-0}
+    \end{minipage}
+
+\end{figure}
+
+Toujours dans les débuts des sujets de BTS, vous devrez comprendre le système dans son ensemble et répondre sur la validation d'exigences du cahier des charges. Ici, une question possible serait :\\
+\textbf{Question} : A l'aide de la représentation SADT ci-dessous, comment le sécateur commande la vitesse avec laquelle la lame se ferme pour couper une branche ?
+
+
+
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=1.1\textwidth]{Images/seca2.png} % Include the figure image
+	\caption{Représentation théorique d'une fonction.}
+	\label{seca2} % Unique label used for referencing the figure in-text
+\end{figure}
+
+
+\section{Chaîne fonctionnelle}
+C'est une représentation que vous observerez sûrement moins que les autres car elle décrit un système dans son ensemble. En générale, nous nous intéresserons à une pièce d'un système,  son industrialisation, sa fabrication, son contrôle ; et c'est déjà beaucoup ! Mais vous pourrez croiser cette schématisation dans certains sujets pour avoir une idée du rôle de la pièce dans le système global.
+
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=1.1\textwidth]{Images/chaine1.JPG} % Include the figure image
+	\caption{Représentation d'une chaîne fonctionnelle complète.}
+	\label{chaine1} % Unique label used for referencing the figure in-text
+\end{figure}
+
+Une chaîne fonctionnelle est une combinaison d'une chaînes d’information et d'une chaîne de puissance. On peut aussi remplacer le nom « chaîne de puissance » par « chaîne d’énergie » car l’énergie correspond à la puissance consommée par le système pendant un certain temps.
+
+\subsection{Chaîne d'information}
+Pour les deux chaînes, chaque bloc (Acquérir, Distribuer etc.) fonctionne grâce à des éléments prévus pour effectuer la fonction du bloc. Le bloc \textbf{acquérir} ne contiendra que des éléments pour acquérir une \textbf{information} (car on est dans la chaîne d'information). Par exemple, un \textbf{capteur} peut acquérir une information.
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=1\textwidth]{Images/chaine2.JPG} % Include the figure image
+	\caption{Représentation d'une chaîne d'information et des éléments pouvant constituer les différents blocs.}
+	\label{chaine2} % Unique label used for referencing the figure in-text
+\end{figure}
+
+
+\subsection{Chaîne d'énergie (ou de puissance)}
+Ici, dans le bloc transmettre, on pourrait aussi retrouver les courroies de transmission, les engrenages ou encore les systèmes roues-vis sans fin.
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=1\textwidth]{Images/chaine3.JPG} % Include the figure image
+	\caption{Représentation d'une chaîne de puissance et des éléments pouvant constituer les différents blocs.}
+	\label{chaine3} % Unique label used for referencing the figure in-text
+\end{figure}
+
+\subsection*{Exemple}
+Dans une centrale hydroélectrique, on peut représenter un système qui pilote l’orientation des pales d'une turbine suivant le niveau de la rivière. Si les pâles ont un angle faible, le débit en sortie sera plus faible que pour un angle plus grand.
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=1\textwidth]{Images/chaine4.JPG} % Include the figure image
+	\caption{Chaîne fonctionnelle du système d'orientation des pâles d'une centrale hydroélectrique.}
+	\label{chaine4} % Unique label used for referencing the figure in-text
+\end{figure}
+
+\subsection{Exercice}
+À partir des documents techniques fournis, compléter les chaînes d’information et d’énergie en donnant les solutions techniques et les grandeurs « effort » et « flux » correspondant à la puissance transmise jusqu’au niveau de la
+chaîne d’entraînement.
+
+\begin{tcolorbox}[colback=gray!5!white,colframe=gray!75!ocre,title=Fenêtre de toit VELUX]\index{Exercice : Fenêtre de toit VELUX}
+
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=1\textwidth]{Images/chaine5.JPG} % Include the figure image
+	\caption{Complétez la chaîne fonctionnelle à l'aide du document réponse}
+	\label{chaine5} % Unique label used for referencing the figure in-text
+\end{figure}
+\end{tcolorbox}
+
+
+\begin{tcolorbox}[colback=gray!5!white,colframe=gray!75!gray,title=Document réponse]
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=1\textwidth]{Images/chaine6.png} % Include the figure image
+	\caption{Question 1.1}
+	\label{chaine6} % Unique label used for referencing the figure in-text
+\end{figure}
+\end{tcolorbox}
+
+
+
+
+
+
 
 %----------------------------------------------------------------------------------------
 %	PRESENTING INFORMATION/RESULTS EXAMPLES CHAPTER
@@ -665,12 +799,10 @@ $\{ \mathcal{V} (S/R) \}
 
 \chapter{Dessine-moi une pièce}
 
-\section{Dessin de définition}\index{Table}
-[Cours 1.2]
-
-
-3. Dessin de définition, vues, coupes, trous etc
-4. Cote intrinsèque, intro specif GPS [comment prouver que deux plans sont parallèles à un intervalle de tolérences près? "Dire ce que l'on veut - deux plans // et aussi dire comment on mesure s'ils le sont, ou si la pièce est mauvaise] , état de surface
+\section{Dessin de définition. A venir}\index{Table}
+%[Cours 1.2]
+%3. Dessin de définition, vues, coupes, trous etc
+%4. Cote intrinsèque, intro specif GPS [comment prouver que deux plans sont parallèles à un intervalle de tolérances près? %"Dire ce que l'on veut - deux plans // et aussi dire comment on mesure s'ils le sont, ou si la pièce est mauvaise] , état %de surface
 
 
 
@@ -685,11 +817,8 @@ $\{ \mathcal{V} (S/R) \}
 %------------------------------------------------
 
 \chapter{Spécification géométrique des produits}
-\section{Titre}
-\subsection{Sous titre}
-\begin{definition}
-lorem
-\end{definition}
+\section{A venir}
+
 
 
 
@@ -711,12 +840,6 @@ lorem
 
 \newpage
 \section{ANNEXE}
- \begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
-	\centering % Horizontally center the figure on the page
-	\includegraphics[width=0.3\textwidth]{Images/ISO.PNG} % Include the figure image
-
-	\label{fig:placeholder} % Unique label used for referencing the figure in-text
-\end{figure}
 
 
 \includepdf{Tolerance-generale-ISO-2768.pdf}\index{ISO 2768-1}
