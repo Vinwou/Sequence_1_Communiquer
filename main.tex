@@ -453,6 +453,15 @@ flexibilité (norme AFNOR X 50-150).
 	\caption{Chaque exigence doit avoir un ou plusieurs critères, niveau et flexibilités.}
 	\label{sys2} % Unique label used for referencing the figure in-text
 \end{figure}
+
+Les critères permettant d’apprécier un système sont notamment liés aux caractéristiques
+techniques (tension d’alimentation, énergies, etc.), aux performances (force, vitesse, temps pour
+passer de 0 à 100 km/h, etc.), à l’esthétique (notion très subjective), mais aussi à l’usage
+(fiabilité, durée de vie, coût global de possession, etc.).
+Le niveau permet de quantifier un critère en indiquant une valeur, un intervalle, une norme, etc.
+La flexibilité donne une indication sur la marge de manœuvre laissée au concepteur.\\
+
+
 Par exemple
 \begin{itemize}
     \item Exigence : un aspirateur en fonctionnement ne doit pas déranger les autres occupants d'une habitation ;
@@ -483,11 +492,149 @@ Dans les sciences de l'ingénieur, on s'intéresse aux écarts entre ce qu'on ve
 
 \includepdf[angle=90]{fleche2.pdf}
 
+\begin{tcolorbox}[colback=gray!5!white,colframe=gray!75!ocre,title=Tiré du BTS 2020]\index{Exercice : SysML}
+Adaptation ergonomique à l’archer : Id= "1.3". \\
+\textbf{Question 1.2.1 }: Préciser quelles pièces permettent d’adapter le décocheur à la main de l’archer. \\
+
+
+Réglage de la course de déclenchement : Id= "1.2"\\
+\textbf{Question 1.2.2 }: Indiquer quelle pièce permet de régler la course de déclenchement.\\
+
+\end{tcolorbox}
+
+
+
+\begin{tcolorbox}[colback=gray!5!white,colframe=gray!75!gray,title=Réponses]
+
+
+\vspace{8 cm}
+
+\end{tcolorbox}
 
 
 
 
 \subsection{Schéma bête à corne}
+Les autres schémas très rependus dans les sujets sont les diagrammes de type "Bête à corne". Ils servirons aux candidat.e.s dans l'analyse/formulation du besoin. Il doit répondre essentiellement à trois questions :
+\begin{enumerate}
+    \item A qui rend-il service ?
+    \item Sur quoi/qui agit-il ?
+    \item Dans quel but ?\\
+\end{enumerate}
+
+
+
+Pour satisfaire le besoin auquel le produit répond, des Fonctions de Service, qui correspondent à des exigences, doivent être remplies par celui-ci : il faut les rechercher et dresser leur liste. Elles se répartissent en 2 catégories :
+
+\begin{enumerate}
+    \item Les Fonctions Principales (une ou plusieurs), FP1, FP2 etc. ce sont des Fonctions du produit correspondant aux raisons
+pour lesquelles ce dernier a été créé : ce sont donc sa ou ses fonctions d’usage. On peut les déduire directement du
+diagramme bête à corne ;
+    \item les Fonctions Contraintes (une ou plusieurs), FC: le produit n’a pas été créé pour cela, mais le fait d’exister lui impose d’assurer certaines Fonctions, en relation avec d’autres éléments de son environnement (appelés EME, Eléments du Milieu Extérieur, ou Interacteurs) , autres que lui-même. Ce sont des Fonctions qui traduisent les contraintes liées à l’adaptation du produit à son environnement et à la prise en compte de ce dernier. Ce sont des obligations à satisfaire, dans différentes catégories.\\
+\end{enumerate}
+
+
+Les contraintes peuvent être classées en six
+catégories :
+\begin{itemize}
+\item  Fonctionnelles : nécessaires pour remplir la FP
+\item  Ergonomiques : faciliter l’utilisation
+\item  Esthétiques : le rendre attrayant
+\item  De sécurité : l’utiliser en toute sécurité-> normes
+\item  Environnementales : être conçu et utilisé dans un
+souci de développement durable
+\item Economiques/commerciales : coût correspondant au
+service, au budget, à la publicité.
+\end{itemize}
+
+Nous avons vu précédemment un système s'intégrant aux arcs dans le BTS 2020. Un diagramme bête à corne de ce système pourrait être le suivant.
+
+
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=0.7\textwidth]{Images/bete1.png} % Include the figure image
+	\caption{Diagramme bête à corne du système 303p}
+	\label{bete1} % Unique label used for referencing the figure in-text
+\end{figure}
+
+Toutes les fonctions,quelles soient \textbf{principales} ou de \textbf{contraintes}, peuvent ensuite être listées sous forme d'un tableau. Le diagramme bête à corne est donc une représentation claire et simplifiée du système.\\
+
+Voici un autre exemple avec un stylo bille, avec le diagramme bête à corne et son tableau des fonctions associées.
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=1\textwidth]{Images/stylo3.png} % Include the figure image
+	\caption{Diagramme bête à corne d'un stylo bille}
+	\label{stylo} % Unique label used for referencing the figure in-text
+\end{figure}
+
+
+
+\subsection{Exemple BTS 2015}
+
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=1\textwidth]{Images/2015A.JPG} % Include the figure image
+	\caption{La commande du fluide peut être manuelle, hydraulique, électrique ou pneumatique. Le fluide peut passer dans les deux sens.}
+	\label{2015A} % Unique label used for referencing the figure in-text
+\end{figure}
+
+Il s'agit d'un "robinet à papillon excentré - gamme DANAÏS 150 - de la marque
+AMRI de l'entreprise KSB. Le robinet, sujet de cette étude, sert à véhiculer tout type de fluides, comme des
+carburants, des eaux chaudes ou brûlantes, des fluides corrosifs et/ou agressifs ou
+contenant des substances solides, des huiles minérales, etc.
+
+
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=1\textwidth]{Images/2015.JPG} % Include the figure image
+	\caption{La fonction principale (F.P) du robinet est d'assurer ou d’interrompre le passage de fluides de différentes compositions (liquide - "semi-épais" - solide) et ce, à différentes températures. Pour assurer cette fonction, le mécanisme doit répondre à certaines fonctionnalités secondaires (F.S.i). Ces fonctionnalités sont classées en 3 catégories : F.S.1 - F.S.2 - F.S.3.}
+	\label{2015} % Unique label used for referencing the figure in-text
+\end{figure}
+
+
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=1\textwidth]{Images/rob11.JPG} % Include the figure image
+	\caption{La commande du fluide peut être manuelle, hydraulique, électrique ou pneumatique. Le fluide peut passer dans les deux sens.}
+	\label{rob11} % Unique label used for referencing the figure in-text
+\end{figure}
+
+
+\begin{tcolorbox}[colback=gray!5!white,colframe=gray!75!ocre,title=Tiré du BTS 2015]\index{Exercice : Bête à corne}
+\textbf{[Problème 1 : Analyse "F.P et F.S.i"]}\\
+
+
+\textbf{Question 1.1 }: Pour chaque fonction "F.P et F.S.i", on demande de définir quelle est la (ou les)
+\textbf{pièce(s) du robinet remplissant cette fonction} et d'associer la (ou les) \textbf{forme(s) permettant de l'assurer}. Répondre pour cela sur le tableau du document réponse DR1. Deux exemples sont proposés pour les fonctions F.S.1 et F.S.2 de façon à permettre de comprendre le principe. \\
+
+
+
+\textbf{Question 2.1 }: Indiquer pour le corps, quelles sont la (ou les) cote(s) et/ou dimension(s)
+correspondante(s) à la fonction principale F.P du corps (guidage en rotation).\\
+
+
+\textbf{Question 2.2 :} Quel constat faites-vous sur les dimensions nominales des diamètres ? \\
+
+
+\textbf{Question 2.3} : Qu'est-ce qui justifie selon vous ce choix du constructeur du point de vue fabrication ?
+
+\end{tcolorbox}
+
+
+
+\begin{tcolorbox}[colback=gray!5!white,colframe=gray!75!gray,title=Document réponse]
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=0.8\textwidth]{Images/rob1.JPG} % Include the figure image
+	\caption{Question 1.1}
+	\label{rob1} % Unique label used for referencing the figure in-text
+\end{figure}
+
+
+
+\end{tcolorbox}
+
+
 \subsection{Diagramme FAST}
 \subsection{Chaîne fonctionnelle}
 
