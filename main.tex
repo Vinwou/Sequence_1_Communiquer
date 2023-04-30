@@ -52,7 +52,7 @@
 \chapterspacebelow{6.75cm} % Default amount of vertical whitespace from the top margin to the start of the text on chapter pages
 
 %----------------------------------------------------------------------------------------
-
+\usepackage{csquotes}
 \begin{document}
 
 
@@ -306,8 +306,14 @@ But : Indiquer ou sont les axes, leur nom et orientation et remplir le tableau.
 
 
 \section{Norme ISO 2768}
+
+\begin{remark}
+    Le dessin de définition sera traité en détail plus tard dans cette séquence [section \ref{dessin}]. Nous nous entraînerons alors à utiliser cette norme pour "traduire" le dessin de définition.
+\end{remark}
+
+
 \begin{definition}
-    La norme vise à simplifier les dessins techniques. Elle indique les tolérances générales (pour les dimensions linéaires et angulaires), et les tolérances géométriques qui n'ont pas d'indication de tolérances sur le schéma. Selon la cotation du schéma, il y aura quatre classes de tolérance possible.\footnote{https://www.iso.org/} \\
+    La norme ISO 2768 vise à simplifier les dessins techniques. Elle indique les tolérances générales (pour les dimensions linéaires et angulaires), et les tolérances géométriques qui n'ont pas d'indication de tolérances sur le schéma. Selon la cotation du schéma, il y aura quatre classes de tolérance possible.\footnote{https://www.iso.org/} \\
 \end{definition}
 
 
@@ -798,8 +804,122 @@ chaîne d’entraînement.
 %------------------------------------------------
 
 \chapter{Dessine-moi une pièce}
+\section{Le dessin de définition}\label{dessin}
 
-\section{Dessin de définition. A venir}\index{Table}
+
+ \og S'il vous plaît... dessine-moi un mouton \fg
+
+
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=0.35\textwidth]{Images/Mou2.JPG} % Include the figure image
+    \includegraphics[width=0.35\textwidth]{Images/Mou1.JPG} % Include the figure image
+	\caption{Le mouton et la caisse}
+	\label{Mou} % Unique label used for referencing the figure in-text
+\end{figure}
+
+
+
+    \og Ça c'est la caisse, le mouton que tu veux est dedans\fg \\
+
+
+
+Ce petit passage du Petit Prince\footnote{Le Petit Prince est une oeuvre française, la plus connue d'Antoine de Saint-Exupéry. Publié en 1943, c'est une oeuvre poétique et philosophique sous l'apparence d'un conte pour enfants. A lire !} nous rappelle qu'il est souvent difficile de cerner exactement la volonté du "client". S'ils n'ont pas les mêmes définitions et usages de fabrications (normes), le résultat final sera impacté. Un dessin de définition est donc bien plus qu'un simple dessin. Il comprend la pièce ou le système voulu par le client, mais aussi de nombreuses informations, directes ou indirectes, décrivant des exigences qui ne peuvent être représenter par un dessin. Par exemple, comment dire à mon fabriquant, que la boite à mouton doit avoir les trois trous parallèles ?\\
+
+Il est essentiel de respecter les différentes normes pour que le fabriquant (vous) soit en mesure de fabriquer un produit qui respecte les attentes du client. Cependant, même en faisant attention, le client comme le fabriquant peuvent faire des erreurs. Le regard critique, additionné à l'expérience des deux parties doivent donc en permanence être étroite pour éviter de constater les mauvaises surprises. 
+
+\subsection{Les règles du dessin}
+Reprenons du début, nous voulons dessiner un objet à réaliser pour qu'il soit compris de tous.tes. Le mieux serait d'avoir suffisamment d'exemple, d'images, de représentations que l'on se fait de la pièce futur et de tout montrer. Nous allons prendre l'exemple d'une roue dentée, et faire des essais jusqu'à arriver à un schéma de définition respectant les normes en vigueur et compréhensible :
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=0.3\textwidth]{Images/R1.JPG} % Include the figure image
+    \includegraphics[width=0.3\textwidth]{Images/R2.JPG} % Include the figure image
+    \includegraphics[width=0.3\textwidth]{Images/R3.JPG} % Include the figure image
+	\caption{Pièce que l'on souhaite réaliser. Orientation des vues prise au hasard.}
+	\label{Roue1} % Unique label used for referencing the figure in-text
+\end{figure}
+Il y a un infinité d'angles de vues pour représenter un objet. Pour être compréhensifs.ves nous ne pouvons pas montrer une vues au hasard, devons réfléchir à une ou plusieurs orientations qui maximise la compréhension de l'objet. Pour cette roue dentée il faudrait se poser de bonnes questions : 
+\begin{itemize}
+    \item A quoi sert la pièce ?
+    \item Qu'est ce qui est important pour fabriquer la pièce ?
+\end{itemize}
+
+La pièce sert à entraîner une autres roue dentée ? le nombre de dentures est important ? L'orientation de la rainure arrière est à prendre en compte ?
+
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=0.33\textwidth]{Images/RF.JPG} % Include the figure image
+    \includegraphics[width=0.23\textwidth]{Images/RC.JPG} % Include the figure image
+    \includegraphics[width=0.3\textwidth]{Images/RD.JPG} % Include the figure image
+	\caption{Pièce que l'on souhaite réaliser. Orientation des vues réfléchis.}
+	\label{Roue2} % Unique label used for referencing the figure in-text
+\end{figure}
+
+Le nombre de vue doit être minimal mais suffisant pour comprendre la pièce. Une fois le nombre, et l'orientation des vues est choisi, pour plus de clarté les couleurs sont enlevées.
+
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=1\textwidth]{Images/roue2.JPG} % Include the figure image
+	\caption{Pièce que l'on souhaite réaliser (avec trop de vues)}
+	\label{Roue3} % Unique label used for referencing the figure in-text
+\end{figure}
+
+Sur la Figure [\ref{Roue3}], on remarque que les vues de droite et de gauche sont symétriquement identiques. L'une des deux pourrait être enlevée. On pourrait donc mettre tout cela dans un dessin, mais il faut encore nous améliorer. Nous allons voir une pratique très commune pour \textit{voir / traduire} (pour montrer à celui qui lira le dessin) des éléments qui pourraient être \textit{cachés}.
+
+\subsection{Les coupes}
+
+Sur cette roue, la coupe peut être intéressante pour les perçages intérieurs ou la rainure par exemple. Comme c'est une pièce de révolution\footnote{Solide engendré par la rotation complète d’une figure plane autour d’une droite appelée l’axe de révolution. Par exemple, Si vous faite tourner un rectangle autour de l’un de ses côtés, cela engendre un cylindre de révolution, appelé aussi un cylindre droit à base discoïdale.}, toutes les coupes qui passent par le centre de l'axe de la roue sont \textit{équivalentes}, mais il arrive souvent que la pièce ait une partie en révolution (symétrique) et une partie non symétrique. Ici la pièce est \textit{globalement} de révolution, mais la rainure à l'arrière n'a plus les mêmes symétries que l'axe de la roue.
+
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=0.3\textwidth]{Images/Coupe1.JPG} % Include the figure image
+    \includegraphics[width=0.3\textwidth]{Images/Coupe2.JPG} % Include the figure image
+    \includegraphics[width=0.3\textwidth]{Images/Coupe3.JPG} % Include the figure image
+    \includegraphics[width=0.3\textwidth]{Images/Coupe4.JPG} % Include the figure image
+    \includegraphics[width=0.3\textwidth]{Images/Coupe5.JPG} % Include the figure image
+    \includegraphics[width=0.3\textwidth]{Images/Coupe6.JPG} % Include the figure image
+	\caption{Pièce progressivement "coupée" par un plan. La dernière pièce est coupée avec un plan dont l'orientation est différentes.}
+	\label{Coupe} % Unique label used for referencing the figure in-text
+\end{figure}
+
+
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=1\textwidth]{Images/coupe_couleur.JPG} % Include the figure image
+	\caption{Mise en plan des vues en coupe. La coupe F à une rotation de 35$^{\circ}$ par rapport aux autres coupes.}
+	\label{Coupe_couleur} % Unique label used for referencing the figure in-text
+\end{figure}
+
+
+
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=1\textwidth]{Images/orientation.JPG} % Include the figure image
+	\caption{Pièce coupée. A gauche : plans de coupes orienté aléatoirement (\textcolor{Orange}{coupes G et H}). A droite : plans de coupes orienté parallèlement (\textcolor{Green}{coupe I}) et perpendiculairement (\textcolor{Green}{coupe J}) à la rainure.}
+	\label{Orientation} % Unique label used for referencing the figure in-text
+\end{figure}
+
+
+\begin{tcolorbox}[colback=gray!5!white,colframe=gray!75!ocre,title=Entrainement]\index{Exercice : Vues/Coupes}
+
+\textbf{Question 1}: Sur la vue isométrique, dessiner les 4 plans de coupes. A gauche, quelle est la difficulté ?\\
+
+\textbf{Question 2}: Entourer les parties qui changent selon l'orientation du plan de coupe.
+
+\end{tcolorbox}
+
+
+
+
+Conventions de placement européenne et américaine indispensables dans le cartouche
+
+\section{Les perspectives}
+Les perspectives ne sont pas des vues normées, mais peuvent être représentées sur le dessin de définition si elles aident à une meilleure compréhension de la pièce.
+\subsection{Cavalière}
+Facile et rapide à construire, mais elle "déforme" la pièce.
+\subsection{Isométrique}
+Elle fait partie des perspectives Axonométrique.
+
 %[Cours 1.2]
 %3. Dessin de définition, vues, coupes, trous etc
 %4. Cote intrinsèque, intro specif GPS [comment prouver que deux plans sont parallèles à un intervalle de tolérances près? %"Dire ce que l'on veut - deux plans // et aussi dire comment on mesure s'ils le sont, ou si la pièce est mauvaise] , état %de surface

@@ -47,9 +47,16 @@
 \usepackage{etoolbox} % Required for conditional logic and easily changing commands
 
 	
-\usepackage{pdfpages}
+\usepackage{pdfpages} %pour les pdf
+
+
+%\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc} 
+\usepackage[french]{babel} % Pour les quotes og fg 
 
 \usepackage[most]{tcolorbox}
+
+
 
 %----------------------------------------------------------------------------------------
 %	MARGINS
