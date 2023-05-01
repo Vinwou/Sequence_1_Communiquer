@@ -804,7 +804,7 @@ chaîne d’entraînement.
 %------------------------------------------------
 
 \chapter{Dessine-moi une pièce}
-\section{Le dessin de définition}\label{dessin}
+\section{Introduction}\label{dessin}
 
 
  \og S'il vous plaît... dessine-moi un mouton \fg
@@ -826,9 +826,11 @@ chaîne d’entraînement.
 
 Ce petit passage du Petit Prince\footnote{Le Petit Prince est une oeuvre française, la plus connue d'Antoine de Saint-Exupéry. Publié en 1943, c'est une oeuvre poétique et philosophique sous l'apparence d'un conte pour enfants. A lire !} nous rappelle qu'il est souvent difficile de cerner exactement la volonté du "client". S'ils n'ont pas les mêmes définitions et usages de fabrications (normes), le résultat final sera impacté. Un dessin de définition est donc bien plus qu'un simple dessin. Il comprend la pièce ou le système voulu par le client, mais aussi de nombreuses informations, directes ou indirectes, décrivant des exigences qui ne peuvent être représenter par un dessin. Par exemple, comment dire à mon fabriquant, que la boite à mouton doit avoir les trois trous parallèles ?\\
 
-Il est essentiel de respecter les différentes normes pour que le fabriquant (vous) soit en mesure de fabriquer un produit qui respecte les attentes du client. Cependant, même en faisant attention, le client comme le fabriquant peuvent faire des erreurs. Le regard critique, additionné à l'expérience des deux parties doivent donc en permanence être étroite pour éviter de constater les mauvaises surprises. 
+Il est essentiel de respecter les différentes normes pour que le fabriquant (vous) soit en mesure de fabriquer un produit qui respecte les attentes du client. Cependant, même en faisant attention, le client comme le fabriquant peuvent faire des erreurs. Le regard critique, additionné à l'expérience des deux parties doivent donc en permanence être étroite pour éviter les mauvaises surprises. 
 
-\subsection{Les règles du dessin}
+\section{Les règles du dessin}
+
+
 Reprenons du début, nous voulons dessiner un objet à réaliser pour qu'il soit compris de tous.tes. Le mieux serait d'avoir suffisamment d'exemple, d'images, de représentations que l'on se fait de la pièce futur et de tout montrer. Nous allons prendre l'exemple d'une roue dentée, et faire des essais jusqu'à arriver à un schéma de définition respectant les normes en vigueur et compréhensible :
 \begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
 	\centering % Horizontally center the figure on the page
@@ -866,7 +868,7 @@ Le nombre de vue doit être minimal mais suffisant pour comprendre la pièce. Un
 
 Sur la Figure [\ref{Roue3}], on remarque que les vues de droite et de gauche sont symétriquement identiques. L'une des deux pourrait être enlevée. On pourrait donc mettre tout cela dans un dessin, mais il faut encore nous améliorer. Nous allons voir une pratique très commune pour \textit{voir / traduire} (pour montrer à celui qui lira le dessin) des éléments qui pourraient être \textit{cachés}.
 
-\subsection{Les coupes}
+\section{Les coupes}
 
 Sur cette roue, la coupe peut être intéressante pour les perçages intérieurs ou la rainure par exemple. Comme c'est une pièce de révolution\footnote{Solide engendré par la rotation complète d’une figure plane autour d’une droite appelée l’axe de révolution. Par exemple, Si vous faite tourner un rectangle autour de l’un de ses côtés, cela engendre un cylindre de révolution, appelé aussi un cylindre droit à base discoïdale.}, toutes les coupes qui passent par le centre de l'axe de la roue sont \textit{équivalentes}, mais il arrive souvent que la pièce ait une partie en révolution (symétrique) et une partie non symétrique. Ici la pièce est \textit{globalement} de révolution, mais la rainure à l'arrière n'a plus les mêmes symétries que l'axe de la roue.
 
@@ -881,6 +883,23 @@ Sur cette roue, la coupe peut être intéressante pour les perçages intérieurs
 	\caption{Pièce progressivement "coupée" par un plan. La dernière pièce est coupée avec un plan dont l'orientation est différentes.}
 	\label{Coupe} % Unique label used for referencing the figure in-text
 \end{figure}
+Pour indiquer les côtes d'une pièce, dessiner la pièce en vue de coupe peut offrir une meilleure compréhension. Pour le tournage, le plan de coupe est généralement placé sur l'axe de révolution de la pièce. C'est vous qui décidez d'ajouter des vues en coupes sur vos dessin mais attention à ne pas en ajouter sans justification. \\
+
+\begin{theorem}[Comment indiquer les vues en coupes :]\index{Coupes (vues)}
+
+    Sur la figure [\ref{Coupe_couleur}], trois vues de coupes sont placée (E, D, C et F). Pour ajouter une vues en coupe vous devez :
+    \begin{itemize}
+        \item Sur la vue principale (vue de face) : Indiquer par une lettre le nom de la coupe, dessiner le plan de coupe en trait mixte (trait long + trait court), indiquer par des flèches de coté d'où on regarde la pièce coupée ;
+        \item Sur la vues de coupe : indiquer le nom de la coupe, indiquer par des hachures la section coupée. 
+    \end{itemize}
+
+        
+    Le positionnement de la vue de coupe doit être obligatoirement lié avec le plan de coupe. Pour les trois premiers plans de coupe (E, D et C) la vue en coupe est positionnée dans le même sens que les flèches (E, D et C). Remarquez que les deux flèches bleu (F) indiquent la position de la vues en coupe \textcolor{Blue}{F-F}
+    
+\end{theorem}
+
+
+
 
 
 \begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
@@ -889,6 +908,18 @@ Sur cette roue, la coupe peut être intéressante pour les perçages intérieurs
 	\caption{Mise en plan des vues en coupe. La coupe F à une rotation de 35$^{\circ}$ par rapport aux autres coupes.}
 	\label{Coupe_couleur} % Unique label used for referencing the figure in-text
 \end{figure}
+
+Vous remarquez que \textit{ce qui est coupé} dispose de \textbf{hachures}. Ceci pour indiquer que le plan de coupe passe dans la matière et quel est le type de matériau.\\
+Pour le BTS CPRP, il vous faut reconnaître deux types de hachures : les \textit{alliages légers} et les \textit{tous matériaux et alliages}. Le type de hachures \textit{cuivre} peut aussi être utile mais souvent moins présent.
+
+\begin{figure}[H]\index{Hachures} % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=0.8\textwidth]{Images/hachures.png} % Include the figure image
+	\caption{Représentation des hachures pour différents matériaux.}
+	\label{hach} % Unique label used for referencing the figure in-text
+\end{figure}
+
+Vous voyez sur la figure [\ref{Coupe_couleur}] que les plans de coupes \textcolor{Pink}{E}, \textcolor{Orange}{C} et \textcolor{Blue}{F} ne sont pas d'une grande utilité pour la compréhension. Quand un dessin de définition est réaliser, on se demande si une vue en coupe est nécessaire, si c'est le cas, il faudra veiller à un positionnement utile. La figure [\ref{Orientation}] représente une pièce avec des vues en coupe proposée aléatoirement et des vues en coupes positionner sur l'axe de révolution de la pièce. 
 
 
 
@@ -908,10 +939,37 @@ Sur cette roue, la coupe peut être intéressante pour les perçages intérieurs
 
 \end{tcolorbox}
 
+\section{Cartouche et positionnement des vues}
 
+Nous allons voir comment placé les vues sur le dessin, ici encore nous devrons respecter une normes. On peut utiliser deux conventions pour placer les vues en correspondance, toutes deux ayant la vue de face comme référence :
+\begin{definition}[Convention des vues en correspondance ]
+    
+\begin{itemize}
+    \item la convention européenne (ou projection européenne) : la vue de dessus est placée sous la vue de face, la vue de droite, à gauche de la vue de face... Ce qui revient, entre deux vues, à faire « rouler » la pièce au-dessus du plan sur lequel elle est censée être posée ;
+    \item la convention américaine (ou projection américaine) : on place la vue de dessus au-dessus de la vue de face, la vue de gauche à sa gauche… Ce qui revient à faire rouler la pièce en dessous du plan.
+\end{itemize}
 
+\end{definition}
 
-Conventions de placement européenne et américaine indispensables dans le cartouche
+L'une des deux représentations doit être choisi (nous travaillerons presque exclusivement avec la convention européenne) et indiquée sur le dessin de définition en représentant un cône avec l'inscription FR ou US (voir figure [\ref{conv}].
+
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=0.6\textwidth]{Images/conv.png} % Include the figure image
+	\caption{Conventions de placement européenne et américaine indispensables dans le cartouche}
+	\label{conv} % Unique label used for referencing the figure in-text
+\end{figure}
+\subsection{Position des vues}
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=1\textwidth]{Images/pos1.png} % Include the figure image
+	\caption{A : vue de Face - B : vue de dessUs - C : vue de Gauche - D : vue de Droite - E : vue de dessOUs - F : vue de derrière (car on fait tourner la vue C)}
+	\label{pos1} % Unique label used for referencing the figure in-text
+\end{figure}
+
+\subsection{Cartouche}
+A faire sur CATIA
+
 
 \section{Les perspectives}
 Les perspectives ne sont pas des vues normées, mais peuvent être représentées sur le dessin de définition si elles aident à une meilleure compréhension de la pièce.
@@ -937,8 +995,13 @@ Elle fait partie des perspectives Axonométrique.
 %------------------------------------------------
 
 \chapter{Spécification géométrique des produits}
-\section{A venir}
-
+\section{Introduction}
+Pourquoi cette invention.
+Comment indiquer ce qu'on veut : norme
+Comment savoir si cela a été bien fait : métrologie, algorithme MMT, outils de mesure
+Différence entre surface spécifiée, surface tolérancée, zone de tolérance, 
+\section{GPS forme}
+\section{GPS qui dépendent d'une spécification geo}
 
 
 
