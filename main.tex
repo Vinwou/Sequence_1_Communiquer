@@ -422,14 +422,17 @@ Pour résumer, la méthode peut être :\\
 \chapter{Représentation schématique}
 
 %------------------------------------------------
-
+\begin{corollary}[S1]
+Décoder un besoin : \textbf{C5.1} 
+Langage de description SysML : \textbf{S1.1.1}
+\end{corollary}
 \section{Langage SysML}
 
 Souvent au début des sujets du BTS, le "\textbf{Systems Modeling Language}" est un incontournable de l'examen du brevet CPRP. Il décrit le système que vous allez étudier pendant 6 heures !\\
-En fonction de ce qu'on souhaite décrire, on utilise un ou plusieurs des diagrammes répartis en 3 catégories (figure \ref{Sys1}).
+En fonction de ce qu'on souhaite décrire, on utilise un ou plusieurs des diagrammes répartis en 3 catégories (voir Figure [\ref{Sys1}]).
 
 
-\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+\begin{figure}[ht] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
 	\centering % Horizontally center the figure on the page
 	\includegraphics[width=1\textwidth]{Images/Sys1.JPG} % Include the figure image
 	\caption{Model SysML}
@@ -989,7 +992,41 @@ Beaucoup de dessin de définition que vous croiserez seront proche de celui figu
 	\label{cart} % Unique label used for referencing the figure in-text
 \end{figure}
 
-A faire sur CATIA
+Finalement, à l'aide de la figure [\ref{cart}], on peut mettre notre roue dentée pour avoir un vrai dessin de définition qui respecte les normes en vigueur. Le document sera compris au moins par toute l'industrie Européenne. 
+
+
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=1.1\textwidth]{Images/pignon1.PNG} % Include the figure image
+	\caption{Dessin de définition d'une pièce}
+	\label{pignon1} % Unique label used for referencing the figure in-text
+\end{figure}
+
+\begin{remark}
+Notez qu'en générale, la langue utilisée en Europe sera l'anglais et il est préférable de l'utiliser pour les dessins de définition en industrie.
+\end{remark}
+
+\begin{tcolorbox}[colback=gray!5!white,colframe=gray!75!ocre,title=Entrainement]\index{Entraînement}
+
+\textbf{Question 1}: D'après vous, quelles sont les côtes manquantes pour fabriquer la pièce ?\\
+
+\textbf{Question 2}: Pourquoi met-on la norme ISO 2768mk ?\\
+
+\textbf{Question 3}: A quoi sert la vue en coupe A-A ? et B-B ?\\
+
+Une fois les pièces fabriquées, on contrôle 3 pièces au hasard et on se penche sur la côte $\varnothing 30$. On trouve respectivement les côtes suivantes : \\
+
+Contrôle de la pièce 1 : $\varnothing 29,79$ \\
+Contrôle de la pièce 2 : $\varnothing 30,21$ \\
+Contrôle de la pièce 3 : $\varnothing 29,83$ \\
+
+\textbf{Question 4}: Quelle(s) pièce(s) doit-on refuser de garder ? \\
+
+\textbf{Question 5}: D'ailleurs, avec quel outil contrôle-t-on la côte de $\varnothing 30$ ?
+
+
+\end{tcolorbox}
+
 
 
 \section{Les perspectives}
@@ -1047,6 +1084,9 @@ Les trois axes représentant la hauteur, la largeur et la profondeur de l’obje
 
 \chapter{Spécification géométrique des produits}
 \section{Introduction}
+
+Les entreprises qui veulent développer des systèmes commandent les pièces dont ils ont besoin aux ateliers d'usinage. 
+
 
 A venir
 %Pourquoi cette invention.
