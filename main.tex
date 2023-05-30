@@ -992,7 +992,7 @@ Beaucoup de dessin de définition que vous croiserez seront proche de celui figu
 	\label{cart} % Unique label used for referencing the figure in-text
 \end{figure}
 
-Finalement, à l'aide de la figure [\ref{cart}], on peut mettre notre roue dentée pour avoir un vrai dessin de définition qui respecte les normes en vigueur. Le document sera compris au moins par toute l'industrie Européenne. 
+Finalement, à l'aide de la figure [\ref{cart}], on peut mettre notre roue dentée pour avoir un vrai dessin de définition qui respecte les normes en vigueurs. Le document sera compris au moins par toute l'industrie Européenne. 
 
 
 \begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
@@ -1083,19 +1083,167 @@ Les trois axes représentant la hauteur, la largeur et la profondeur de l’obje
 %------------------------------------------------
 
 \chapter{Spécification géométrique des produits}
+
+\begin{corollary}[GPS]
+    \textbf{S6.2.3} – Relation métrologie et tolérancement normalisé \\
+    \textbf{S6.1} – Spécification des produits \\
+    \textbf{C6.1} - Décoder un dossier de conception et les spécifications du cahier des charges \\
+    \textbf{C10.7} Déterminer des spécifications de réalisation \\
+    
+    
+\end{corollary}
+
+Le cour sur la \textbf{spécification géométrique des produits} commence par une présentation simple sur l'utilité de ce concept. Pour le début d'année votre but sera savoir identifier ce qu'on appellera souvent les \textit{spécifs GPS} sur les dessins de définitions : Savoir les nommer et justifier leur présence pour des cas simples. Les questions sur la justification de spécifications géométriques reviennent souvent à l'examen du BTS CPRP.
+
 \section{Introduction}
 
-Les entreprises qui veulent développer des systèmes commandent les pièces dont ils ont besoin aux ateliers d'usinage. 
+Les entreprises qui veulent développer des systèmes commandent les pièces dont ils ont besoin aux ateliers d'usinage. Le dessin de définition nous permet de définir des longueurs et des angles, \textbf{toujours} avec une tolérance associée\footnote{Rappelez-vous, il ne peut jamais y avoir de côtes sans tolérances. Si elle n'est pas directement indiquée, c'est qu'il y a une norme générale qui indique la dispersion acceptée pour que la pièce soit considérée comme bonne.}. Cependant pour quelqu'un qui imagine une pièce à fabriquer, il est parfois difficile de représenter \textit{le besoin} seulement avec des longueurs et des angles.
+
+\begin{tcolorbox}[colback=gray!5!white,colframe=gray!75!ocre,title=Entrainement]\index{Entraînement}
+
+\textbf{Question 1}: Comment indiquer à un camarade de classe que vous voulez une pièce qui à deux surfaces parallèles ?
+
+\textbf{Question 2}: Comment avoir la preuve que deux surfaces sont effectivement parallèles ?
 
 
-A venir
-%Pourquoi cette invention.
-%Comment indiquer ce qu'on veut : norme
+
+
+\end{tcolorbox}
+
+
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=0.4\textwidth]{Images/pieceC.PNG}
+    \includegraphics[width=0.3\textwidth]{Images/abr1.JPG}
+	\caption{Pièces à réaliser. A gauche : On souhaite que les deux perçages du haut soient \textit{coaxiaux}. A droite : L'arbre doit s'insérer dans les perçages.}
+	\label{pieceC} % https://kastorcorp.be/la-perspective-part1/
+\end{figure}
+
+
+Sur la figure [\ref{pieceC}] les perçages face à face doivent accueillir un arbre. Si l'une des deux pièces est mauvaise, le système ne fonctionnera pas. 
+En général, soit : 
+\begin{itemize}
+    \item le système n'est fabriqué qu'avec une tolérance très grossière : Les perçages sont bien plus grand que l'arbre et le tout ne pose pas de problème de fabrication ;
+    \item le système nécessite une tolérance très fine : L'arbre et les perçages sont presque du même diamètre ce qui pose une réflexion sur la réalisation. Aussi, plus les perçages sont éloignés, plus l'usinage de la pièce doit être précise. 
+\end{itemize}
+
+
+
+
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=1\textwidth]{Images/pieceCdraw.PNG} 
+	\caption{Pièce à réaliser. On souhaite trouver un moyen de traduire notre besoin : Les perçages en rouge doivent être \textit{coaxiaux} pour que l'arbre passe à l'intérieur. }
+	\label{pieceCdraw} % https://kastorcorp.be/la-perspective-part1/
+\end{figure}
+
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=0.7\textwidth]{Images/arbr2.JPG} 
+	\caption{Arbre passant dans les deux perçages}
+	\label{arbr2} % https://kastorcorp.be/la-perspective-part1/
+\end{figure}
+
+
+En fait, il existe plein de façon d'exprimer ce qu'on à besoin de réaliser, encore une fois, on utilise des normes pour représenter nos besoins. Par exemple, pour traduire le fait qu'on veut faire passer une arbre dans nos deux perçages, il y a une \textbf{spécification géométrique} de type \textbf{tolérance de position} qui s'appelle \textbf{coaxialité}.
+
+
+\section{Généralités et définitions}
+
+
+\begin{definition}[Spécification géométrique]\index{Spécification géométrique}
+
+La spécification géométrique des produits, symbolisée \textbf{GPS}, consiste à définir, au travers d’un \textbf{dessin de définition}, la forme (géométrie), les dimensions et les caractéristiques de surfaces d’une pièce qui en assurent un fonctionnement optimal, ainsi que la \textbf{dispersion} (ou écarts tolérés) autour de cet optimal pour laquelle la fonction \textbf{reste} satisfaite.\\
+    
+[ISO 14638:2015 - Spécification géométrique des produits (GPS) Schéma directeur.]
+
+\end{definition}
+
+
+\begin{theorem}[Intérêt des spécifications GPS :]
+
+\begin{itemize}
+    \item Assurer la montabilité des pièces ;
+    \item Interchangeabilité et fabrication indépendante des pièces ;
+    \item Bon fonctionnement et durée de vie ;
+    \item \textbf{Donner les tolérances les plus larges possibles}.
+\end{itemize}
+\end{theorem}
+
+
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=1\textwidth]{Images/diag11.png} 
+	\caption{Démarches associées au concept GPS}
+	\label{diag11} % https://kastorcorp.be/la-perspective-part1/
+\end{figure}
+
+
+Dès l'instant où nous concevons une nouvelle pièce, nous nous posons la questions de la faisabilité. Quelle niveau de tolérance avons-nous besoin ? Est-ce possible à fabriquer ? Quels moyens de mesure doit-on avoir pour vérifier si la pièce sera bonne ? Si une pièce est fabriquée mais que nous avons pas de moyen de mesurer une tolérance aussi fine que prévu par le concepteur, nous ne pourrons pas trancher pour savoir si la pièce est à prendre ou à laisser.\\
+
+
+\begin{figure}[H]\index{Méthode : spécif GPS} % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=1.15\textwidth]{Images/diag12.png} 
+	\caption{Méthode pour l'inscription des cotations GPS}
+	\label{diag12} % https://kastorcorp.be/la-perspective-part1/
+\end{figure}
+
+A la fin de la séquence, vous devrez être capable de repérer les différentes spécif GPS, de les nommer, puis de faire une phrase pour traduire la codification du dessin de définition. 
+
+
+\begin{theorem}
+    Quand on côte une pièce, ou qu'on indique une spécification géométrique, il y a souvent deux cas, on peut soit signifier :
+    \begin{itemize}
+        \item Cette surface doit être placée à XXX d'une autre surface ;
+        \item Cette surface doit être droite.
+    \end{itemize}
+Dans le premier cas, on parle de quelque chose par rapport à une autre. Dans le deuxième, c'est juste la surface qui doit être droite. Il y a pas besoin d'expliquer par rapport à quoi. On les appelles \textbf{intrinsèques} et elle correspondent aux spécifications de type \textbf{Forme}.
+
+\end{theorem}
+
+
+
 %Comment savoir si cela a été bien fait : métrologie, algorithme MMT, outils de mesure
 %Différence entre surface spécifiée, surface tolérancée, zone de tolérance, 
-\section{GPS forme}
-\section{GPS qui dépendent d'une spécification geo}
+\section{Spécification géométrique de forme}
 
+Dans le tableau suivant, les spécif GPS dependent d'elles même. Par exemple, une cylindricité doit être "\textit{cylindrique}" mais n'a pas besoin d'un autre éléments pour que l'on comprenne. La tolérance est seulement \textit{à quel point le cylindre est bien circulaire} !
+
+\begin{figure}[H]\index{Méthode : spécif GPS} % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=1.15\textwidth]{Images/formes.JPG} 
+	\caption{Spécification géométrique de type \textbf{Forme}}
+	\label{forme} % https://kastorcorp.be/la-perspective-part1/
+\end{figure}
+
+
+Si on reprend la Figure [\ref{diag12}] et ces spécifications géométrique de forme : il n'y aura pas de référence spécifié à l'intérieur du cadre. On aura donc seulement la désignation, et la tolérance voulue.
+
+\section{Spécification géométrique qui peuvent dépendre d'autres éléments}
+
+\subsection{Spécification de position}
+\begin{figure}[H]\index{Méthode : spécif GPS} % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=1.15\textwidth]{Images/pos.JPG} 
+	\caption{Spécification géométrique de type \textbf{Position}}
+	\label{pos} % https://kastorcorp.be/la-perspective-part1/
+\end{figure}
+
+\subsection{Spécification d'orientation}
+\begin{figure}[H]\index{Méthode : spécif GPS} % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=1.15\textwidth]{Images/ori.JPG} 
+	\caption{Spécification géométrique de type \textbf{Orientation}}
+	\label{ori} % https://kastorcorp.be/la-perspective-part1/
+\end{figure}
+\subsection{Spécification de battement}
+\begin{figure}[H]\index{Méthode : spécif GPS} % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[width=1.15\textwidth]{Images/bat.JPG} 
+	\caption{Spécification géométrique de type \textbf{Battement}}
+	\label{bat} % https://kastorcorp.be/la-perspective-part1/
+\end{figure}
 
 
 %----------------------------------------------------------------------------------------
